@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nas Camera</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+
+            <h2 class="mt-5">CAMERA</h2>
+
+            <img src="{{ url_for('video_feed') }}" height="80%">
+            <h3 style="font-family:courier;">Instructions:</h3>
+            <ol style="font-family:courier;">
+{#                <li>Stop/Start--Toggle between stop or start live streaming</li>#}
+                <li>Start/Stop Recording--Toggle between starting and stopping video recording</li>
+            </ol>
+                        <form method="post" action="{{ url_for('tasks') }}">
+{#                <input type="submit" value="Stop/Start" name="stop"/>#}
+                <input type="submit" value="Start/Stop Recording" name="rec"/>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
